@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 $kernel_source $device_codename
+git clone --depth=1 https://github.com/Dhaniarta/android_kernel_xiaomi_sdm660 whyred
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
 # Main
-ANYKERNEL=$anykernel # IMPORTANT ! Declare your AnyKernel Github Repository
-KERNEL_NAME=$kernel_name # IMPORTANT ! Declare your kernel name
-KERNEL_ROOTDIR=$(pwd)/$device_codename # IMPORTANT ! Fill with your kernel source root directory.
-DEVICE_CODENAME=$device_codename # IMPORTANT ! Declare your device codename
-DEVICE_DEFCONFIG=$kernel_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
+ANYKERNEL=https://github.com/Dhaniarta/AnyKernel3 # IMPORTANT ! Declare your AnyKernel Github Repository
+KERNEL_NAME=Kitsune # IMPORTANT ! Declare your kernel name
+KERNEL_ROOTDIR=$(pwd)/whyred # IMPORTANT ! Fill with your kernel source root directory.
+DEVICE_CODENAME=whyred # IMPORTANT ! Declare your device codename
+DEVICE_DEFCONFIG=whyred_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
 CLANG_ROOTDIR=$(pwd)/clang # IMPORTANT! Put your clang directory here.
-export KBUILD_BUILD_USER=xyzuan # Change with your own name or else.
-export KBUILD_BUILD_HOST=xyzscape-ci # Change with your own hostname.
-IMAGE=$(pwd)/lavender/out/arch/arm64/boot/Image.gz-dtb
+export KBUILD_BUILD_USER=Dhaniarta # Change with your own name or else.
+export KBUILD_BUILD_HOST=Ktsn-ci # Change with your own hostname.
+IMAGE=$(pwd)/whyred/out/arch/arm64/boot/Image.gz-dtb
 DATE=$(date +"%F-%S")
 START=$(date +"%s")
+
 
 # Checking environtment
 # Warning !! Dont Change anything there without known reason.
