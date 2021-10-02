@@ -37,7 +37,7 @@ echo ================================================
 function compile() {
 
    # Your Telegram Group
-   curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
+   curl -s -X POST "https://api.telegram.org/bot1959026182:AAF4B_3Ag5xFHSJcEzY9Tz0bZkQo5UfVGiI/sendMessage" \
         -d chat_id="$chat_id" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
@@ -62,8 +62,8 @@ function compile() {
 function push() {
     cd AnyKernel
     ZIP=$(echo *.zip)
-    curl -F document=@$ZIP "https://api.telegram.org/bot$token/sendDocument" \
-        -F chat_id="$chat_id" \
+    curl -F document=@$ZIP "https://api.telegram.org/bot1959026182:AAF4B_3Ag5xFHSJcEzY9Tz0bZkQo5UfVGiI/sendDocument" \
+        -F chat_id="-1001558149701" \
         -F "disable_web_page_preview=true" \
         -F "parse_mode=html" \
         -F caption="Compile took $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s). | For <b>Xiaomi Redmi Note 7 (lavender)</b> | <b>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</b>"
@@ -71,8 +71,8 @@ function push() {
 }
 # Fin Error
 function finerr() {
-    curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
-        -d chat_id="$chat_id" \
+    curl -s -X POST "https://api.telegram.org/bot1959026182:AAF4B_3Ag5xFHSJcEzY9Tz0bZkQo5UfVGiI/sendMessage" \
+        -d chat_id="-1001558149701" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=markdown" \
         -d text="Build throw an error(s)"
