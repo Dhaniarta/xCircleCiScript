@@ -38,7 +38,7 @@ function compile() {
 
    # Your Telegram Group
    curl -s -X POST "https://api.telegram.org/bot1959026182:AAF4B_3Ag5xFHSJcEzY9Tz0bZkQo5UfVGiI/sendMessage" \
-        -d chat_id="$chat_id" \
+        -d chat_id="-1001558149701" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
         -d text="<b>xKernelCompiler</b>%0ABUILDER NAME : <code>${KBUILD_BUILD_USER}</code>%0ABUILDER HOST : <code>${KBUILD_BUILD_HOST}</code>%0ADEVICE DEFCONFIG : <code>${DEVICE_DEFCONFIG}</code>%0ACLANG VERSION : <code>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</code>%0ACLANG ROOTDIR : <code>${CLANG_ROOTDIR}</code>%0AKERNEL ROOTDIR : <code>${KERNEL_ROOTDIR}</code>"
@@ -54,7 +54,7 @@ function compile() {
 	finerr
 	exit 1
    fi
-        git clone --depth=1 ${AnyKernel} AnyKernel
+        git clone --depth=1 https://github.com/Dhaniarta/AnyKernel3 AnyKernel
 	cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 
