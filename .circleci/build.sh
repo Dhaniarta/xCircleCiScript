@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 https://github.com/Dhaniarta/kernel_xiaomi_sdm660 whyred
+git clone --depth=1 https://github.com/Dhaniarta/Kernel_whyred whyred
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
 # Main
