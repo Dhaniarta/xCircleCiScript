@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
 git clone --depth=1 https://github.com/Dhaniarta/Kernel_whyred whyred
-git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
+git clone --depth=1 https://github.com/Dhaniarta/Otaku-clang clang
 
 # Main
 ANYKERNEL=https://github.com/Dhaniarta/AnyKernel3 # IMPORTANT ! Declare your AnyKernel Github Repository
