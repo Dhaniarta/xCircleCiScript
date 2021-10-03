@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 https://github.com/Dhaniarta/Kernel_whyred whyred
+git clone --depth=1 https://github.com/Dhaniarta/kernel-whyred-2 whyred
 git clone --depth=1 https://github.com/Dhaniarta/Otaku-clang clang
 
 # Main
